@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const userEmail="tanzeem@gmail.com";
+        if(userEmail)
+        {
+            console.log("Got user email");
+        }
+        else
+        {
+            console.log("Don't have user email");
+        }
+
+
+
+        // falsy values
+        // false, 0, -0, BigInt 0n, "", null, undefined, NaN
+
+
+        //truthy values
+        // true, "0", "false", " ", [], {}, function(){}
+
+
+        const array=[1];
+        if(array.length==0)
+        {
+            console.log("Array is empty...");
+        }
+        else
+        {
+            console.log("Array is stored values...");
+        }
+
+
+        const object={};
+        if(Object.keys(object).length===0)
+        {
+            console.log("Object is empty...");
+        }
+        else
+        {
+            console.log("Object is stored values...");
+        }
+
+        // false==0    // true
+        // false==""   // true
+        // 0==""      // true
+
+    </script>
+</body>
+</html>
