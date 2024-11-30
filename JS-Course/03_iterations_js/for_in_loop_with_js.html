@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for in
+        
+        const myObject=
+        {
+            JS:"JavaScript",
+            CPP:"C++",
+            JAVA:"Java",
+            PY:"Python",
+            RB:"Ruby"
+        }
+
+        for (const key in myObject) 
+        {
+            // console.log(key, ":-" ,myObject[key]);
+        }
+
+
+
+        const array=["Java","C","C++","Python","Swift","Ruby"];
+        
+        for (const key in array) 
+        {
+            // console.log(array[key]);
+        }
+
+
+        const map=new Map();
+        map.set("IN","India");
+        map.set("USA","United State America");
+        map.set("FR","France");
+        map.set("IN","India");      
+
+        for (const key in map) 
+        {
+            console.log(key);
+        }
+
+
+
+    </script>
+</body>
+</html>

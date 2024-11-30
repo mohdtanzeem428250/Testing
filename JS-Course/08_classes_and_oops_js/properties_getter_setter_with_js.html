@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+         function User(username,email,password)
+         {
+            this._username=username;
+            this._email=email;
+            this._password=password;
+            Object.defineProperty(this,'username',
+            {
+                get: function()
+                {
+                    return this._username;
+                },
+                set: function(value)
+                {
+                    this._username=value;
+                }
+            })
+            Object.defineProperty(this,"email",
+            {
+                get:function()
+                {
+                    return this._email;
+                },
+                set:function(value)
+                {
+                    this._email=value;
+                }
+            });
+            Object.defineProperty(this,"password",
+            {
+                get:function()
+                {
+                    return this._password;
+                },
+                set:function(value)
+                {
+                    this._password=value;
+                }
+            });
+        }
+        const object=new User("Tanzeem","Tanzeem@gmail.com","123456");
+        console.log(object.username);
+        console.log(object.email);
+        console.log(object.password);
+    </script>
+</body>
+</html>

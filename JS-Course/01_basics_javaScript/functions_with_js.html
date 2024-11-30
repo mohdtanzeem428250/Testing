@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayMyname()
+        {
+            console.log("T");
+            console.log("A");
+            console.log("N");
+            console.log("Z");
+            console.log("E");
+            console.log("E");
+            console.log("M");
+        }
+        // sayMyname  // function reference
+        // sayMyname();  // function execution
+
+
+        function addTwoNumber(number1,number2)  // parameters
+        {
+            if(number1===undefined || number2===undefined)
+            {
+                console.log("Please Passed Your Number");
+            }
+            else
+            {
+                console.log(number1+number1);
+            }
+        }
+        // const result=addTwoNumber(2,2);  // arguments
+        // console.log("Result :- ",result);
+
+
+
+
+        function addTwoNumber(number1,number2)
+        {
+            // console.log("execution"); 
+            return number1+number2;
+        }
+        // const result=addTwoNumber(4,5);
+        // console.log("Result :- ",result);
+
+
+
+
+        function loginUserMessages(username="Computer")
+        {
+            if(!username)
+            {
+                console.log("Please Passed UserName");
+                return
+            }
+            return `${username} Just Logged In`;
+        }
+
+        // console.log(loginUserMessages("Mohd"));
+
+        // console.log(loginUserMessages());
+
+        function calculateCartPrice(val1,val2,...num1)  // rest operator
+        {
+            return num1;
+        }
+        // console.log(calculateCartPrice(200,300,400,500,600,700,800,900));
+
+
+        const user=
+        {
+            username:"tanzeem",
+            price:299
+        }
+        function handleObject(anyObject)
+        {
+            console.log(`Username is=${anyObject.username} and Price is=${anyObject.price}`);
+        }
+        // handleObject(user);
+        handleObject
+        ({
+            username:"JavaScript",
+            price:440
+        })
+
+
+
+        const myArray=[10,20,30,40,50,60,70,80,90];
+        function returnSecondValue(getArray)
+        {
+            return getArray;
+        }
+        const value=returnSecondValue(myArray);
+        console.log(value);
+
+
+
+
+        
+
+        const myArray1=[10,20,30,40,50,60,70,80,90];let sum=0;
+        function returnSecondValue(getArray)
+        {
+            for(let i=0;i<=getArray.length-1;i++)
+            {
+                sum=sum+getArray[i];
+            }
+            return sum;
+        }
+        const value1=returnSecondValue(myArray1);
+        console.log(value1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+        // setInterval continous execution
+
+    setInterval(() => 
+    {
+        // console.log("Tanzeem",Date.now());
+    },2000);
+
+
+
+    const setinterval=function(str)
+    {
+        // console.log(str,"Tanzeem",Date.now());
+    }
+    const reference=setInterval(setinterval,1000,"Hello");
+    clearInterval(reference);
+
+
+
+
+    let stop;
+        const start=function()
+        {
+            console.log("hello world");
+        }
+        const startValues=setInterval(start,1000);
+
+       stop=function()
+       {
+        clearInterval(startValues);
+       }
+       document.getElementById("start").addEventListener('click',start)
+       document.getElementById("stop").addEventListener('click',stop)
+       
+</script>
+</html>

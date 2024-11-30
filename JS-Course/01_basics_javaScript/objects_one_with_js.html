@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //singleton
+        //used of constructor are singleton
+         //   Object.create();
+        
+        
+        //object literals
+
+        const mySymbol=Symbol("key1");
+        const JsUser=
+        {
+            name:"Rahul",
+            "age":21,
+            [mySymbol]:"values",
+            location:"panjab",
+            email:"tanzeem@gmail.com",
+            isLoggedIn:false,
+            lastLoggedIn:["Monday","Friday"]
+        };
+
+        // console.log(JsUser.email);
+        // console.log(JsUser["email"]);
+        // console.log(JsUser["age"]);
+        // console.log(JsUser[mySymbol]);
+        
+        JsUser.email="values@gmail.com";
+        // Object.freeze(JsUser);
+        JsUser.email="google@gmail.com";
+        // console.log(JsUser);
+
+        JsUser.greeting=function()
+        {
+            console.log("Hello JS User");
+        }
+        JsUser.greetingTwo=function()
+        {
+            console.log(`Hello JS User ${this.name} and Age ${this.age}`);
+        }
+        console.log(JsUser.greeting());
+        console.log(JsUser.greetingTwo());
+    </script>
+</body>
+</html>

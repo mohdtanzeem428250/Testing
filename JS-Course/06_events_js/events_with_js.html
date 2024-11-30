@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141;">
+    <h1>Amazing images</h1>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="one" src="https://erp.flpindia.net/FBO_Documents/ProductImages/709sonya__refining_gel_mask_pd_main_512_X_512_1554897986741.png"></li>
+            <li><img width="200px" id="two" src="https://erp.flpindia.net/FBO_Documents/ProductImages/539Forever-Honey_1000px.jpg"></li>
+            <li><img width="200px" id="three" src="https://erp.flpindia.net/FBO_Documents/ProductImages/350Launch_Social5.jpg"></li>
+            <!-- onclick="alert('clicked') -->
+            <li><img width="200px" id="four" src="https://erp.flpindia.net/FBO_Documents/ProductImages/614ALOE%20VERA%20GEL%20-%201L%20TETRA%201.jpg"></li>
+            <li><img width="200px" id="five" src="https://erp.flpindia.net/FBO_Documents/ProductImages/694NPL4.jpg"></li>
+            <a href="https://google.com" id="google">Google</a>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("one").onclick=function()
+    // {
+        // alert("clicked");
+    // }
+
+
+    // document.getElementById("one").addEventListener('click',function(){
+        // alert("clicked events");
+    // })
+
+
+    // attachEvent()
+    // jQuery
+
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget
+        // clientX, clientY, screenX, screenY
+        // altkey, ctrlkey, shiftkey, keycode    
+
+
+    // document.getElementById("one").addEventListener('click',function(e)
+    // {
+        // console.log(e);
+    // },false) 
+
+    // eventPropagation two types
+        // 1.event bubbling
+        // 2.event capturing
+
+
+
+
+        document.getElementById("images").addEventListener('click',function(e)
+        {
+            // console.log("click inside the ul");
+        },false)
+
+        //bubbling is :- child to parent (false) or (by-default) apply
+        //capturing is:- parent to child (true)
+
+        // document.getElementById("three").addEventListener('click',function(e)
+        // {
+            // console.log("click in images three");
+            // e.stopPropagation();
+        // },false)
+
+
+
+        document.getElementById("google").addEventListener('click',function(e)
+        {
+            // console.log("clicked Google");
+            e.preventDefault();
+            e.stopPropagation();
+        },false)
+
+
+
+        document.querySelector("#images").addEventListener('click',function(e)
+        {
+            // console.log(e.target.parentNode);
+            // console.log(e.target.tagName);
+            if(e.target.tagName==='IMG')
+            {
+                let removeli=e.target.parentNode;
+                removeli.remove();
+            }
+
+            //remove.parentNode.removechild(removeli);
+            e.stopPropagation();
+        },false)
+</script>
+</html>

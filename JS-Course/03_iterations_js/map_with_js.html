@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myArray=[1,2,3,4,5,6,7,8,9,10];
+        const increment=myArray.map( (elements) =>
+        {
+            return elements+10;
+        })
+        // console.log(increment);
+
+
+
+        myArray.forEach( (element) =>
+        {
+            if(element)
+            {
+                let values=element+10;
+                // console.log(values);
+            }
+        })
+
+
+
+
+                        // Chaining
+
+        const newArray=myArray
+        .map( (elements) =>{return elements+10})
+
+        .map( (elements) =>{return elements * 2})
+
+        .map( (elements) =>{return elements-2})
+
+        .filter( (elements)=>{return elements>30})
+        console.log(newArray);
+    </script>
+</body>
+</html>

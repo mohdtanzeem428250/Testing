@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myArray=[1,2,3,4,5];
+        const initialValue=0;
+
+        const newArray=myArray.reduce( function(accumulator,currentValue) 
+        {
+            // console.log(`Accumulator Is :- ${accumulator} And Current Value Is :- ${currentValue}`);
+            return accumulator+currentValue;
+        },initialValue)
+        // console.log(newArray);
+
+
+
+        const myTotal=myArray.reduce( (accumulator,currentValue) => (accumulator+currentValue),initialValue);
+        // console.log(myTotal);
+
+
+
+        const shopping=
+        [
+            {
+                itemName:"JavaScript",
+                price:3999
+            },
+            {
+                itemName:"Python",
+                price:1999
+            },
+            {
+                itemName:"Data Science",
+                price:18990
+            },
+            {
+                itemName:"Mobile Development",
+                price:5999
+            },
+        ];
+        const totalPrice=shopping.reduce( (accumulator,item) => 
+        {
+            return accumulator+item.price;
+        },0)
+        console.log(totalPrice);
+    </script>
+</body>
+</html>

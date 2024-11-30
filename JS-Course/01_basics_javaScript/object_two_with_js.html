@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const tinderUser=new Object();  // singleton object
+
+        const tinderUser={}  // Non-singleton object
+
+        tinderUser.id="123abc";
+        tinderUser.name="Charle babbage";
+        tinderUser.isLoggedIn=false;
+    
+        // console.log(tinderUser);
+
+
+        const regulerUser=
+        {
+            email:"values@gmail.com",
+            fullName:
+            {
+                userFullName:
+                {
+                    firstName:"Mohd",
+                    lastName:"Tanzeem",
+                }
+            },
+            address:
+            {
+                state:"Uttar-Pradesh",
+                city:"Bareilly",
+            },
+        }
+        // console.log(regulerUser.fullName.userFullName.firstName);
+        // console.log(regulerUser.address.state);
+
+
+        const obj1={1:"a",2:"b"};
+        const obj2={3:"c",4:"d"};
+        const obj4={5:"e",6:"f"};
+
+        // const obj3={obj1,obj2};
+
+        // const obj3=Object.assign({},obj1,obj2,obj4);
+
+        const obj3={...obj1,...obj2,...obj4};
+        // console.log(obj3);
+        // console.log(typeof(obj3));
+
+
+        const users=
+        [
+            {
+                id:110,
+                email:"t@gmail.com"
+            },
+            {
+                id:111,
+                email:"t@gmail.com"
+            },
+            {
+                id:112,
+                email:"t@gmail.com"
+            },
+            {
+                id:113,
+                email:"t@gmail.com"
+            },
+            {
+                id:114,
+                email:"t@gmail.com"
+            }
+        ]
+        // console.log(typeof(users));
+        // console.log(users[0].id);
+        // console.log(tinderUser);
+
+        // console.log(Object.keys(tinderUser));
+        // console.log(Object.values(tinderUser));
+        // console.log(Object.entries(tinderUser));
+        // console.log(users.length);
+
+
+        // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+        // console.log(tinderUser.hasOwnProperty('isLogged'));
+
+
+                        //  De-structure
+        const course=
+        {
+            coursename:"JS in Hindi",
+            price:"1999",
+            courseInstructor:"Online"
+        }    
+
+        // console.log(course["coursename"],["price"],["courseInstructor"]);
+
+        const {coursename:cn, price:p, courseInstructor:ci}=course;  //object are de-structure
+
+        // console.log(coursename, price, courseInstructor);
+        console.log(cn, p, ci);
+
+
+        const navbar=({company})=>
+        {
+            // de-structure in react 
+
+        }
+        navbar(company="TCS");
+
+
+        // {
+        //     "name":"tanzeem",
+        //     "coursename":"JS in hindi",
+        //     "price":"free"
+        // }
+    </script>
+</body>
+</html>

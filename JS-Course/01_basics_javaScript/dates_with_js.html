@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myDate=new Date();
+        // console.log(myDate);
+        // console.log(myDate.toString());
+        // console.log(myDate.toLocaleString());
+        // console.log(typeof myDate);
+        // console.log(myDate.toJSON());
+
+        // let createdDate=new Date(2024, 2, 23);
+
+        // let createdDate=new Date(2024, 2, 23, 3,5);
+
+        let createdDate=new Date("01-09-2024");
+        
+        let myTimeStamp=Date.now();
+        // console.log(myTimeStamp);
+        // console.log(createdDate.getTime());
+        // console.log(Math.floor(Date.now()/1000));
+
+
+        let newDate=new Date();
+        //console.log(newDate);
+        // console.log(newDate.getTimezoneOffset());
+        //console.log(newDate.getDay());
+        //console.log(newDate.getMonth()+1);
+        //console.log(`${newDate.toLocaleString()} and days ${newDate.getDay()} are ${newDate.getMonth()+1}`);
+
+
+
+        newDate.toLocaleString('default',{
+            weekday:"long"
+        })
+    </script>
+</body>
+</html>

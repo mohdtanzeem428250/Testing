@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  Immediately Invoked Function Expressions (IIFE)
+
+        (function dataConnect()
+        {
+            // named IIFE
+            console.log(`Data-base Connectivity`);
+        }) ();                     // Immediately execution
+
+        // dataConnect();
+
+
+        // global scope ke polution se problem hoti hain kafi, global scope ke variable and function ko hatane ke liya IIFE function ka use kiya 
+
+
+        (()=>
+        {
+            // un-named IIFE
+            console.log("HELLO");
+        })();
+
+
+        (demo1=(name)=>
+        {
+            console.log(`Hello, ${name}`);
+        })
+        ("Tanzeem")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <script>
+            const descripter=Object.getOwnPropertyDescriptor(Math,"PI");
+
+            // console.log(descripter);
+
+            // console.log(Math.PI);
+            // Math.PI=12;
+            // console.log(Math.PI);
+
+
+            // const myNewObject=Object.create(null);
+
+            const User=
+            {
+                username:"Tanzeem",
+                password:"123456",
+                isLoggedIn:true,
+                lead:function()
+                {
+                    console.log("Code Fat Gaya");
+                }
+            }
+
+
+            console.log(User);
+            console.log(Object.getOwnPropertyDescriptor(User, "username"));
+
+            Object.defineProperty(User,"username",{
+                // writable:true,
+                enumerable:false
+            });
+
+            for (let [key,value] of Object.entries(User)) 
+            {
+                if(typeof value==="string" || typeof value==="boolean")
+                console.log(`${key}:${value}`);
+            }
+
+
+        </script>
+    </body>
+</html>

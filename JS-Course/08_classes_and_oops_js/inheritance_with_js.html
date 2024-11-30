@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User
+        {
+            constructor(username)
+            {
+                this.username=username;
+            }
+            logMe()
+            {
+                console.log(`USERNAME IS :- ${this.username}`);
+            }
+        }
+        class Teacher extends User
+        {
+            constructor(email,username)
+            {
+                super(username);
+                this.email=email;
+            }
+            logMe1()
+            {
+                console.log(`EMAIL IS :- ${this.email}`);
+            }
+        }
+        class Owner extends Teacher
+        {
+            constructor(email,password,username)
+            {
+                super(email,username);
+                this.password=password;
+            }
+            logMe2()
+            {
+                console.log(`PASSWORD IS :- ${this.password}`);
+            }
+        }
+        const object=new Owner("Tanzeem@gmail.com",12345678,"Tanzeem");
+
+        object.logMe();
+        object.logMe1();
+        object.logMe2();
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myName="   Tanzeem        ";
+        // console.log(myName.trueLength);
+
+
+
+
+        let myArray=["apple","banana","litchi"];
+
+        let myFunction=function()
+        {
+            console.log("Function");
+        }
+
+        let isLoggedIn=
+        {
+            username:"Tanzeem",
+            password:123456,
+            getFunction:function()
+            {
+                console.log(`Username :- ${this.username} `);   
+            }
+        }
+        Object.prototype.Tanzeem=function()
+        {
+            console.log(`Tanzeem is present in all object`);
+        }
+        Array.prototype.helloTanzeem=function()
+        {
+            console.log(`Hello Tanzeem`);
+        }
+        Function.prototype.hTanzeem=function()
+        {
+            console.log(`PowerFull Function`);
+        }
+        // isLoggedIn.Tanzeem();
+        // myArray.Tanzeem();
+        // myFunction.Tanzeem();
+        // myArray.helloTanzeem();
+        // myFunction.hTanzeem();
+
+
+                        //Inheritance
+
+
+
+        const User=
+        {
+            name:"Tanzeem",
+            email:"Tanzeem@gmail.com"
+        }
+        const Teacher=
+        {
+            makeVideo:true
+            // __proto__:User
+        }
+        const TeachingSupport=
+        {
+            isAvailable:false
+            // __proto__:Teacher
+        }
+        const TASupport=
+        {
+            makeAssignment:"JS Assignment",
+            fullTime:true,
+            __proto__:TeachingSupport
+        }
+        Teacher.__proto__=User
+
+            //Modern Syntax
+
+        Object.setPrototypeOf(TeachingSupport, Teacher)
+
+
+        let anotherUsername="Tanzeem     ";
+        String.prototype.trueLength=function()
+        {
+            console.log(`${this}`);
+            console.log(`True length is :- ${this.trim().length}`);
+        }
+        anotherUsername.trueLength();
+        "iceTea".trueLength();
+    </script>
+</body>
+</html>

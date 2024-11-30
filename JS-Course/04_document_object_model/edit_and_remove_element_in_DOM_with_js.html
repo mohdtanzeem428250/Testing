@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="listContainer">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function listItems(languageName)
+    {
+        const li=document.createElement("li");
+        li.innerText=`${languageName}`;
+        const ul=document.querySelector(".listContainer");
+        ul.append(li)
+    }
+    listItems("Python");
+    listItems("Java");
+
+
+    function addOptimizedLanguage(languageName)
+    {
+        const li=document.createElement("li");
+        const addText=document.createTextNode(languageName)
+        li.appendChild(addText);
+        const addList=document.querySelector(".listContainer");
+        addList.appendChild(li);
+    }
+    addOptimizedLanguage("Ruby");
+
+
+
+            // Edit
+    const secondHold=document.querySelector("li:nth-child(3)");
+    const newList=document.createElement("li");
+    newList.textContent="SQL";
+    secondHold.replaceWith(newList)
+
+
+
+    const firstHold=document.querySelector("li:first-child");
+    firstHold.outerHTML="<li>C</li>";
+
+
+
+            // Remove
+    const lastReference=document.querySelector("li:last-child");
+    lastReference.remove()
+
+</script>
+</html>

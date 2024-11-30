@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for each
+
+        const programming=["Java","JavaScript","C","C++","Python"];
+
+        programming.forEach(function(item)
+        {
+            // console.log(item);
+        })
+
+
+        programming.forEach( (item)=>
+        {
+            // console.log(item);
+        })
+
+
+        function printMe(values)
+        {
+            // console.log(values);
+        }
+        programming.forEach(printMe);
+
+
+
+
+        programming.forEach( (item, index, arr)=>
+        {
+            // console.log(`Items = (${item}) Index = (${index}) Array = (${arr})`);
+        })
+
+
+
+        const myCoding=
+        [
+            {
+                languageName:"JavaScript",
+                languageFileName:"js"
+            },
+            {
+                languageName:"Java",
+                languageFileName:"java"
+            },
+            {
+                languageName:"Python",
+                languageFileName:"py"
+            }
+        ];
+
+
+        myCoding.forEach( (items) =>
+        {
+            console.log(items.languageName,items.languageFileName);
+        })
+
+
+    </script>
+</body>
+</html>

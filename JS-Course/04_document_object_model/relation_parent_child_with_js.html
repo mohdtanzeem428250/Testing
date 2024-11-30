@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <!-- hhgh -->
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+    </div>
+    <script>
+        const parent=document.querySelector(".container");
+        // console.log(parent.children);
+
+        console.log(parent.children[0].innerText);
+
+        for (let index = 0; index < parent.children.length; index++) 
+        {
+            console.log(parent.children[index].innerText);
+        }
+        parent.children[0].style.background="red";
+        // console.log(parent.firstElementChild);
+
+        // console.log(parent.lastElementChild);
+
+
+        const d1=document.querySelector(".day");
+        // console.log(d1);
+        // console.log(d1.parentElement);
+        // console.log(d1.nextElementSibling);
+
+        console.log("Nodes:- ",parent.childNodes);
+    </script>
+</body>
+</html>

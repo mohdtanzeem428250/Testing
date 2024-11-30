@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user=
+        {
+            username:"Tanzeem",
+            price:199,
+            welcomeMessage:function()
+            {
+                console.log(`${this.username}, Welcome to Website`);
+                console.log(this);   // this keyword refer to corrent contant
+            }
+        }
+        // user.welcomeMessage();
+
+        // user.username="Mohd";
+        // user.welcomeMessage();
+
+
+        // console.log(this);  // empty object
+
+        function chai()
+        {
+            let name="tanzeem";
+            console.log(this.name);
+        }
+        // chai();
+
+
+
+        // ++++++++++++++++++++++++++(--arrow function--)++++++++++++++++++++++++++++++
+
+
+        // const functionDemo=function()
+        // {
+            // let name="tanzeem";
+            // console.log(this.name);
+        // }
+        // functionDemo();
+
+
+
+        const functionDemo=()=>
+        {
+            let name="tanzeem";
+            console.log(name);
+        }
+
+        // functionDemo();
+    
+
+
+        const add_TwoNumber=(num1,num2)=>
+        {
+            return(num1+num2);  // Explicit return
+        }
+        // console.log(addTwoNumber(2,3));
+
+
+                            //Implicit return
+
+        // const addTwo_Number=(num1,num2)=> num1+num2;
+
+        // const addTwo_Number=(num1,num2)=> (num1+num2);
+
+        // const addTwo_Number=(num1,num2)=> ({username:"user@#1234"});
+
+        const addTwo_Number=(num1,num2)=> ([1,2,3,4,5,6,7,8]);
+        
+
+
+        console.log(addTwo_Number(3,4))
+
+
+    
+    </script>
+</body>
+</html>

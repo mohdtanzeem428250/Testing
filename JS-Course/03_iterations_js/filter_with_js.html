@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta fourLessThanvaluesme="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const coding=["Python","JavaScript","Java","C++","C"];
+
+        const return1=coding.forEach( (items) =>
+        {
+            // console.log(items);
+        })              // forEach loop are not return a values
+
+
+        // console.log(return1);
+
+
+
+                        // filter
+
+        const myArray=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // const numbers=myArray.filter( (values) => values>4)
+
+        // const numbers=myArray.filter( (values) => {return values>4})
+
+        const numbers=myArray.filter( (values) =>
+        {
+            return values>4
+        })
+        // console.log(numbers);
+
+
+
+        const number=myArray.filter( (values,index,array) =>
+        {
+            // console.log(values,index,array);
+            return values>4
+        })
+        // console.log(number);
+
+
+
+
+        const fourGreaterThanValues=[];
+        const fourLessThanvalues=[];
+        myArray.forEach( (number) =>
+        {
+            if(number>4)
+            {
+                fourGreaterThanValues.push(number);
+            }
+            else
+            {
+                fourLessThanvalues.push(number);
+            }
+        })
+        // console.log(fourGreaterThanValues);
+        // console.log(fourLessThanvalues);
+
+
+
+
+
+
+        const Books=
+        [
+            {
+                title:"Book One",
+                genre:"Computer Fundamentals",
+                publish:1981,
+                edition:2004
+            },
+            {
+                title:"Book Two",
+                genre:"Computer Network",
+                publish:1992,
+                edition:2008
+            },
+            {
+                title:"Book Three",
+                genre:"Computer Graphics",
+                publish:1999,
+                edition:2007
+            },
+            {
+                title:"Book Four",
+                genre:"Communication Skill",
+                publish:1989,
+                edition:2010
+            },
+            {
+                title:"Book Five",
+                genre:"Computer Architecture",
+                publish:2009,
+                edition:2014
+            },
+            {
+                title:"Book Six",
+                genre:"Internet Programming",
+                publish:1987,
+                edition:2010
+            },
+            {
+                title:"Book Saven",
+                genre:"Management",
+                publish:1986,
+                edition:1996
+            },
+            {
+                title:"Book Eight",
+                genre:"Computer Fundamentals",
+                publish:2011,
+                edition:2016
+            },
+            {
+                title:"Book Nine",
+                genre:"Computer Graphics",
+                publish:1981,
+                edition:1989
+            },
+            {
+                title:"Book Ten",
+                genre:"Computer Network",
+                publish:2006,
+                edition:2022
+            },
+        ];
+        const books=Books.filter( (items) =>
+        {
+            // return items.genre==="Computer Network"
+            return items.publish>=2000 && items.genre==="Computer Network";
+        })
+        console.log(books);
+    </script>
+</body>
+</html>

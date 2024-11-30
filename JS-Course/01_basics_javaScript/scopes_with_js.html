@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let value1=10;
+        // var value2=20;
+        // const value3=30;
+        // var value2=333;       //local scope
+
+
+        let value1=111;
+        if (true) 
+        {
+            let value1=10;    // global scope
+            const value2=30;
+            // console.log(value1);
+        }
+
+        // console.log(value1);
+        // console.log(value2);
+
+    
+        function one()
+        {
+            const username="Tanzeem";
+            function two()
+            {
+                const website="github";
+                console.log(username);
+            }
+            // console.log(website);
+            two();
+        }
+        // one();
+
+        if(true)
+        {
+            const username="User@123";
+
+            if(username==="User@123")
+            {
+                const website="docker.com";
+                console.log("Username :- ",username,"|","Website :- ",website);
+            }
+            // console.log(website);
+        }
+        
+        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Interesting^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+        console.log(addOne(5));  //  execute
+        function addOne(num1)
+        {
+            return num1+1;
+        }
+
+        
+        console.log(addTwo(5));  // error
+        const addTwo=function(num1)
+        {
+            return num1+2;
+        }
+
+
+    </script>
+</body>
+</html>

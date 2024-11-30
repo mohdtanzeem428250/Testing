@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Primitive datatype
+        // 7 Category
+        //String, Number Boolean, null, undefined, Symbol, BigInt
+
+        //JavaScript is a dynamically typed language
+
+        const score=100;
+        const scoreValue=100.4;
+
+        const isLoggedIn=false;
+        const outsideTemp=null;
+        let userEmail=undefined;
+
+        const id=Symbol('123');
+        const anotherId=Symbol('123'); 
+
+        // console.log(id===anotherId);  //  false
+
+        const bigNumber=78621685113697213493n;
+        // console.log(bigNumber);
+
+        // Reference (Non-Primitive)
+        // Array, Objects, Functions
+
+
+        const languages=["C","C++","Java","Python","HTML", "CSS"];
+
+        const myObject=
+        {
+            name:"Rahul",
+            age:21,
+            class:"BCA"
+        }
+        const myFunction=function()
+        {
+            console.log("Hello World");
+        }
+        // console.log(typeof languages);  // object
+        // console.log(typeof myObject);  // object 
+        // console.log(typeof myFunction);  // function
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        //Stack (Primitive), Heap (Non-Primitive)
+        let youtubeName="MyCollege.com";
+        let anotherName=youtubeName;
+        anotherName="MySchool.com";
+        // console.log(youtubeName);
+        // console.log(anotherName);
+
+
+        let userOne=
+        {
+            email:"user@gmail.com",
+            upi:"user@upi.com"
+        }
+        let userTwo=userOne;
+ 
+        userTwo.email="userTwo@gmail.com";
+
+        console.log(userOne.email);
+        console.log(userTwo.email);
+    </script>
+</body>
+</html>

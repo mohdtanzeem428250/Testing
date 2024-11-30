@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for
+
+        for (let index = 0+1; index <= 10; index++) 
+        {
+            const element = index;  
+            if(element==5)
+            {
+                // console.log(`${element} is Best Number`);
+            } 
+            // console.log(element); 
+        }
+
+
+
+        for (let i = 0+1; i <= 10; i++) 
+        {
+            // console.log(`Outer loop values (${i})`);
+            for (let j = 0+1; j <= 10; j++) 
+            {
+                // console.log(`Inner loop values (${j}) and Outer loop values (${i})`);   
+                // console.log(`${i} * ${j} = ${i*j}`);
+            }
+        }
+
+
+
+
+        array=["C","C++","JAVA","PYTHON","GO"];
+        for(let index=0;index<array.length;index++)
+        {
+            const elements=array[index];
+            // console.log(elements);
+        }
+
+
+
+
+
+        // break, continue
+
+        for(let i=1;i<=20;i++)
+        {
+            if(i===8)
+            {
+                // console.log(`${i} Number No Access Permissions denied`);
+                break;
+            }
+            // console.log(i);
+        }
+
+
+
+        for(let j=1;j<=20;j++)
+        {
+            if(j==10)
+            {
+                console.log(` -> ${j} No Print`);
+                continue;
+            }
+            console.log(j);
+        }
+        
+        
+        
+    </script> 
+</body>
+</html>
